@@ -39,8 +39,9 @@ public class SKUIButton: SKUIWidget {
     }
     
     public init(caption: String,
-                position: CGPoint,
                 size: CGSize = CGSize(width: 200, height: 48),
+                position: CGPoint,
+                cornerRadius: CGFloat = 4,
                 fontName: String = "Avenir-Black") {
         super.init()
         
@@ -48,6 +49,7 @@ public class SKUIButton: SKUIWidget {
         self.fontName = fontName
         self.size = size
         self.position = position
+        self.cornerRadius = cornerRadius
     }
     
 #if os(macOS)
@@ -88,12 +90,12 @@ public class SKUIButton: SKUIWidget {
         
         self.sprite = buttonSprite
         
-        self.bind("focus",{
+        self.bind(.focus,{
             (self.sprite as! SKShapeNode).fillColor = self.focusBackgroundColor
             self.labelSprite?.fontColor = self.focusColor
         });
         
-        self.bind("blur",{
+        self.bind(.blur,{
             (self.sprite as! SKShapeNode).fillColor = self.backgroundColor
             self.labelSprite?.fontColor = self.color
         });

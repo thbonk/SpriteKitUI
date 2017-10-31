@@ -107,12 +107,12 @@ open class SKUIScene: SKScene {
                     if widget.touchableSprite != nil && widget.touchableSprite == deeperTouch {
                         if (self.focusedWidget != nil) {
                             if (self.focusedWidget!.touchableSprite != deeperTouch) {
-                                self.focusedWidget!.trigger("blur")
-                                widget.trigger("focus")
+                                self.focusedWidget!.trigger(.blur)
+                                widget.trigger(.blur)
                                 self.focusedWidget = widget
                             }
                         } else {
-                            widget.trigger("focus")
+                            widget.trigger(.focus)
                             self.focusedWidget = widget
                         }
                         
@@ -125,7 +125,7 @@ open class SKUIScene: SKScene {
         
         if (!handled) {
             if (self.focusedWidget != nil) {
-                self.focusedWidget!.trigger("blur")
+                self.focusedWidget!.trigger(.blur)
                 self.focusedWidget = nil
             }
         }
@@ -143,7 +143,7 @@ open class SKUIScene: SKScene {
         var handled = false
         
         if (self.focusedWidget != nil) {
-            self.focusedWidget!.trigger("blur")
+            self.focusedWidget!.trigger(.blur)
             
             for location in locations {
                 for touchedNode in self.nodes(at: location) {
@@ -156,7 +156,7 @@ open class SKUIScene: SKScene {
                     
                     // is the sprite the same one we started touching in touchesBegan?
                     if self.focusedWidget!.sprite == deeperTouch {
-                        self.focusedWidget!.trigger("tap")
+                        self.focusedWidget!.trigger(.tap)
                         
                         handled = true
                         break
