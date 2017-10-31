@@ -15,6 +15,7 @@ public class SKUIButton: SKUIWidget {
     // MARK: - Public Properties
     
     open var caption: String = "Untitled"
+    open var fontName: String = "Avenir-Black"
     open var color: SKUIColor = SKUIColor.black
     open var strokeColor: SKUIColor = SKUIColor.black
     open var backgroundColor: SKUIColor = SKUIColor.white
@@ -37,6 +38,18 @@ public class SKUIButton: SKUIWidget {
         self.size = CGSize(width: 200, height: 48)
     }
     
+    public init(caption: String,
+                size: CGSize = CGSize(width: 200, height: 48),
+                position: CGPoint,
+                fontName: String =  "Avenir-Black") {
+        super.init()
+        
+        self.caption = caption
+        self.fontName = fontName
+        self.size = size
+        self.position = position
+    }
+    
 #if os(macOS)
     required public init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -47,7 +60,7 @@ public class SKUIButton: SKUIWidget {
     // MARK: - API
     
     open override func render() {
-        self.labelSprite = SKLabelNode(fontNamed: "Avenir-Black")
+        self.labelSprite = SKLabelNode(fontNamed: self.fontName)
         self.labelSprite!.text = self.caption
         self.labelSprite!.fontColor = self.color
         self.labelSprite!.fontSize = 20
