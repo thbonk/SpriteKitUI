@@ -12,11 +12,14 @@ import UIKit
 public extension SKUIWidget {
     
     override public func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.downEvent()
     }
     
     override public func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.dragEvent()
     }
     
     override public func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.upEvent()
     }
 }

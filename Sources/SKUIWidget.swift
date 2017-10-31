@@ -16,6 +16,12 @@ import GameplayKit
 #endif
 
 public class SKUIWidget: SKUIEventReceiver {
+    
+    // MARK: - Public Constants
+    
+    public static let DownEvent = "down"
+    public static let DragEvent = "drag"
+    public static let UpEvent = "up"
 
     // MARK: - Public Proiperties
     
@@ -140,7 +146,18 @@ public class SKUIWidget: SKUIEventReceiver {
         self.position = CGPoint(x: x,y: y)
     }
     
-   
     open func panGesture(_ sender: SKUIPanGestureRecognizer) {   
+    }
+    
+    open func downEvent() {
+        self.trigger(SKUIWidget.DownEvent)
+    }
+    
+    open func dragEvent() {
+        self.trigger(SKUIWidget.DragEvent)
+    }
+    
+    open func upEvent() {
+        self.trigger(SKUIWidget.UpEvent)
     }
 }
