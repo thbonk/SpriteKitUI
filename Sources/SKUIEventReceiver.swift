@@ -65,7 +65,9 @@ public class SKUIEventReceiver: SKUIResponder {
     open func trigger(_ event: SKUIEventIdentifier) {
         if (self.events[event] != nil) {
             for (_, handler) in self.events[event]! {
-                handler()
+                DispatchQueue.main.async {
+                    handler()
+                }
             }
         }
     }
