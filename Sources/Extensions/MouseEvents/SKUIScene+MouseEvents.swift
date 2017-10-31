@@ -11,19 +11,19 @@ import Cocoa
 
 public extension SKUIScene {
     
-    override public func mouseDown(with event: NSEvent) {
+    override open func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
         
         self.widgetInteractionBegan(locations: [event.location(in: self)])
     }
     
-    override public func mouseDragged(with event: NSEvent) {
+    override open func mouseDragged(with event: NSEvent) {
         super.mouseDragged(with: event)
         
         self.widgetMoveInteraction(locations: [event.location(in: self)])
     }
     
-    override public func mouseUp(with event: NSEvent) {
+    override open func mouseUp(with event: NSEvent) {
         super.mouseUp(with: event)
         
         self.widgetIntercationsEnded(locations: [event.location(in: self)])

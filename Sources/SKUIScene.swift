@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import GameplayKit
 
-public class SKUIScene: SKScene {
+open class SKUIScene: SKScene {
     
     // MARK: - Private Properties
     
