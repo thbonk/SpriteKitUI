@@ -39,9 +39,9 @@ public class SKUIButton: SKUIWidget {
     }
     
     public init(caption: String,
-                size: CGSize = CGSize(width: 200, height: 48),
                 position: CGPoint,
-                fontName: String =  "Avenir-Black") {
+                size: CGSize = CGSize(width: 200, height: 48),
+                fontName: String = "Avenir-Black") {
         super.init()
         
         self.caption = caption
