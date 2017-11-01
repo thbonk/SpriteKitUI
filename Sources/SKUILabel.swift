@@ -17,8 +17,8 @@ public class SKUILabel: SKUIWidget {
     open internal(set) var caption: String = "Untitled"
     open internal(set) var fontName: String = "Avenir-Black"
     open internal(set) var fontSize: CGFloat = 20
-    open internal(set) var color: UIColor = SKUITheme.instance.labelColor
-    open internal(set) var backgroundColor: UIColor = SKUITheme.instance.labelBackground
+    open internal(set) var color: SKUIColor = SKUITheme.instance.labelColor
+    open internal(set) var backgroundColor: SKUIColor = SKUITheme.instance.labelBackground
     open internal(set) var labelSprite: SKLabelNode?
     open internal(set) var verticalAlignment = SKLabelVerticalAlignmentMode.bottom
     open internal(set) var horizontalAlignment = SKLabelHorizontalAlignmentMode.left
@@ -48,6 +48,12 @@ public class SKUILabel: SKUIWidget {
         self.fontName = fontName
         self.fontSize = fontSize
     }
+    
+#if os(macOS)
+    required public init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+#endif
     
     
     // MARK: - API
