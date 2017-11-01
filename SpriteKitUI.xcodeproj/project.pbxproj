@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E934A7231FA92B2B0024BEE9 /* SKUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934A7221FA92B2B0024BEE9 /* SKUILabel.swift */; };
+		E934A7241FA92B2B0024BEE9 /* SKUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934A7221FA92B2B0024BEE9 /* SKUILabel.swift */; };
+		E934A7251FA92B2B0024BEE9 /* SKUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934A7221FA92B2B0024BEE9 /* SKUILabel.swift */; };
 		E938A7C61FA7AE1E00CA3729 /* SKUIPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938A7C51FA7AE1E00CA3729 /* SKUIPlatform.swift */; };
 		E938A7C71FA7AE1E00CA3729 /* SKUIPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938A7C51FA7AE1E00CA3729 /* SKUIPlatform.swift */; };
 		E938A7C81FA7AE1E00CA3729 /* SKUIPlatform.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938A7C51FA7AE1E00CA3729 /* SKUIPlatform.swift */; };
@@ -52,6 +55,7 @@
 		BBB55AFE1C8F8CBB0050DDA9 /* SpriteKitUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpriteKitUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB55B1D1C8F9E850050DDA9 /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BBB55B1E1C8F9E920050DDA9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E934A7221FA92B2B0024BEE9 /* SKUILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SKUILabel.swift; path = Sources/SKUILabel.swift; sourceTree = SOURCE_ROOT; };
 		E938A7C41FA7AC7400CA3729 /* SpriteKitUI.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = SpriteKitUI.podspec; sourceTree = "<group>"; };
 		E938A7C51FA7AE1E00CA3729 /* SKUIPlatform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUIPlatform.swift; sourceTree = "<group>"; };
 		E938A7C91FA7AF2000CA3729 /* SKUIEventReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKUIEventReceiver.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				E938A7C91FA7AF2000CA3729 /* SKUIEventReceiver.swift */,
 				E938A7CD1FA7B19F00CA3729 /* SKUIWidget.swift */,
 				E938A7D91FA7B80900CA3729 /* SKUIButton.swift */,
+				E934A7221FA92B2B0024BEE9 /* SKUILabel.swift */,
 				E938A7DD1FA7B9C200CA3729 /* SKUIScene.swift */,
 				E938A7D11FA7B42200CA3729 /* SKUITheme.swift */,
 				E938A7D51FA7B57B00CA3729 /* SKUIMargins.swift */,
@@ -325,6 +330,7 @@
 				E938A7EB1FA7C05B00CA3729 /* SKNode+IgnoreEvents.swift in Sources */,
 				E938A7D61FA7B57B00CA3729 /* SKUIMargins.swift in Sources */,
 				E94EB9D61FA823580022959A /* SKUIWidget+TouchEvents.swift in Sources */,
+				E934A7231FA92B2B0024BEE9 /* SKUILabel.swift in Sources */,
 				E94EB9DB1FA8254F0022959A /* SKUIScene+TouchEvents.swift in Sources */,
 				E938A7CA1FA7AF2000CA3729 /* SKUIEventReceiver.swift in Sources */,
 				E938A7DE1FA7B9C200CA3729 /* SKUIScene.swift in Sources */,
@@ -342,6 +348,7 @@
 				E938A7C71FA7AE1E00CA3729 /* SKUIPlatform.swift in Sources */,
 				E938A7EC1FA7C05B00CA3729 /* SKNode+IgnoreEvents.swift in Sources */,
 				E94EB9D41FA822E00022959A /* SKUIWidget+MouseEvents.swift in Sources */,
+				E934A7241FA92B2B0024BEE9 /* SKUILabel.swift in Sources */,
 				E938A7D71FA7B57B00CA3729 /* SKUIMargins.swift in Sources */,
 				E938A7CB1FA7AF2000CA3729 /* SKUIEventReceiver.swift in Sources */,
 				E938A7DF1FA7B9C200CA3729 /* SKUIScene.swift in Sources */,
@@ -359,6 +366,7 @@
 				E938A7ED1FA7C05B00CA3729 /* SKNode+IgnoreEvents.swift in Sources */,
 				E938A7D81FA7B57B00CA3729 /* SKUIMargins.swift in Sources */,
 				E94EB9D71FA823580022959A /* SKUIWidget+TouchEvents.swift in Sources */,
+				E934A7251FA92B2B0024BEE9 /* SKUILabel.swift in Sources */,
 				E94EB9DC1FA8254F0022959A /* SKUIScene+TouchEvents.swift in Sources */,
 				E938A7CC1FA7AF2000CA3729 /* SKUIEventReceiver.swift in Sources */,
 				E938A7E01FA7B9C200CA3729 /* SKUIScene.swift in Sources */,

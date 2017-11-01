@@ -14,16 +14,17 @@ public class SKUIButton: SKUIWidget {
 
     // MARK: - Public Properties
     
-    open var caption: String = "Untitled"
-    open var fontName: String = "Avenir-Black"
-    open var color: SKUIColor = SKUIColor.black
-    open var strokeColor: SKUIColor = SKUIColor.black
-    open var backgroundColor: SKUIColor = SKUIColor.white
-    open var focusBackgroundColor: SKUIColor = SKUIColor.gray
-    open var focusColor: SKUIColor = SKUIColor.white
-    open var cornerRadius:CGFloat = 4
-    open var labelSprite: SKLabelNode?
-    open var autoSize: Bool = false
+    open internal(set) var caption: String = "Untitled"
+    open internal(set) var fontName: String = "Avenir-Black"
+    open internal(set) var fontSize: CGFloat = 20
+    open internal(set) var color: SKUIColor = SKUIColor.black
+    open internal(set) var strokeColor: SKUIColor = SKUIColor.black
+    open internal(set) var backgroundColor: SKUIColor = SKUIColor.white
+    open internal(set) var focusBackgroundColor: SKUIColor = SKUIColor.gray
+    open internal(set) var focusColor: SKUIColor = SKUIColor.white
+    open internal(set) var cornerRadius:CGFloat = 4
+    open internal(set) var labelSprite: SKLabelNode?
+    open internal(set) var autoSize: Bool = false
     open var hidden = false {
         didSet {
             self.sprite?.isHidden = self.hidden
@@ -42,11 +43,13 @@ public class SKUIButton: SKUIWidget {
                 size: CGSize = CGSize(width: 200, height: 48),
                 position: CGPoint,
                 cornerRadius: CGFloat = 4,
-                fontName: String = "Avenir-Black") {
+                fontName: String = "Avenir-Black",
+                fontSize: CGFloat = 20) {
         super.init()
         
         self.caption = caption
         self.fontName = fontName
+        self.fontSize = fontSize
         self.size = size
         self.position = position
         self.cornerRadius = cornerRadius
@@ -65,7 +68,7 @@ public class SKUIButton: SKUIWidget {
         self.labelSprite = SKLabelNode(fontNamed: self.fontName)
         self.labelSprite!.text = self.caption
         self.labelSprite!.fontColor = self.color
-        self.labelSprite!.fontSize = 20
+        self.labelSprite!.fontSize = self.fontSize
         self.labelSprite!.horizontalAlignmentMode = .center
         self.labelSprite!.verticalAlignmentMode = .center
         
